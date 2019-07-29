@@ -26,7 +26,7 @@ module Fastlane
         
         # New version must be greater than current
         if current_major.to_i < upcoming_major.to_i ||
-           (current_major.to_i == upcoming_major.to_i && current_minor.to_i < upcoming_minor.to_i)
+           (current_major.to_i == upcoming_major.to_i && current_minor.to_i >= upcoming_minor.to_i)
           UI.user_error!("New version number must be greater than current version number")      
         end
     
